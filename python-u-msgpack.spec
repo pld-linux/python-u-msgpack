@@ -4,7 +4,6 @@
 %bcond_without	python2 # CPython 2.x module
 %bcond_without	python3 # CPython 3.x module
 
-%define 	module	template
 Summary:	Portable, lightweight MessagePack serializer and deserializer written in pure Python
 Summary(pl.UTF-8):	Przenośna, lekka serializacja i deserializacja MessagePack napisana w czystym Pythonie
 Name:		python-u-msgpack
