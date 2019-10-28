@@ -8,7 +8,7 @@ Summary:	Portable, lightweight MessagePack serializer and deserializer written i
 Summary(pl.UTF-8):	Przenośna, lekka serializacja i deserializacja MessagePack napisana w czystym Pythonie
 Name:		python-u-msgpack
 Version:	2.3.0
-Release:	2
+Release:	3
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.python.org/simple/u-msgpack-python
