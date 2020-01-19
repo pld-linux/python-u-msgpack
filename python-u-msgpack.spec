@@ -7,13 +7,13 @@
 Summary:	Portable, lightweight MessagePack serializer and deserializer written in pure Python
 Summary(pl.UTF-8):	Przenośna, lekka serializacja i deserializacja MessagePack napisana w czystym Pythonie
 Name:		python-u-msgpack
-Version:	2.3.0
-Release:	3
+Version:	2.5.2
+Release:	1
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.python.org/simple/u-msgpack-python
 Source0:	https://files.pythonhosted.org/packages/source/u/u-msgpack-python/u-msgpack-python-%{version}.tar.gz
-# Source0-md5:	ec8ed77352283acb300b5c94746b7303
+# Source0-md5:	bbeedd924f3d8c8ee90611914b3594e6
 URL:		https://github.com/vsergeev/u-msgpack-python
 %if %{with tests} && %(locale -a | grep -q '^C\.UTF-8$'; echo $?)
 BuildRequires:	glibc-localedb-all
@@ -83,11 +83,19 @@ definiowane przez aplikacje.
 export LC_ALL=C.UTF-8
 
 %if %{with python2}
-%py_build %{?with_tests:test}
+%py_build
+
+%if %{with tests}
+%{__python} test_umsgpack.py
+%endif
 %endif
 
 %if %{with python3}
-%py3_build %{?with_tests:test}
+%py3_build
+
+%if %{with tests}
+%{__python3} test_umsgpack.py
+%endif
 %endif
 
 %install
